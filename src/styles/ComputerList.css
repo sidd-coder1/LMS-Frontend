@@ -1,0 +1,610 @@
+/* Computer List Container */
+.computer-list-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header Styles */
+.computer-list-header {
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.computer-list-header h2 {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin: 1.5rem 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #4a6cf7;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  background: rgba(74, 108, 247, 0.1);
+  border: 1px solid rgba(74, 108, 247, 0.2);
+  margin-bottom: 1rem;
+}
+
+.back-button:hover {
+  background: rgba(74, 108, 247, 0.15);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Search and Filter */
+.search-container {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.search-input {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.search-input input {
+  width: 100%;
+  padding: 0.8rem 1rem 0.8rem 2.8rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.search-input input:focus {
+  outline: none;
+  border-color: #4a6cf7;
+  box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.2);
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  font-size: 1rem;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.5rem 1.25rem;
+  border: 1px solid #e2e8f0;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #475569;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.filter-btn:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.filter-btn.active {
+  background: #4a6cf7;
+  color: white;
+  border-color: #4a6cf7;
+}
+
+/* Computer Grid */
+.computer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.computer-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.computer-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.computer-card-inner {
+  padding: 1.5rem;
+}
+
+.computer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+  gap: 1rem;
+}
+
+.computer-name {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status-badge .status-icon {
+  font-size: 0.9em;
+}
+
+.status-working {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.status-not-working {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.status-maintenance {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+/* Computer Specs */
+.computer-specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  padding: 1rem 0;
+  border-top: 1px solid #f1f5f9;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.spec {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.spec-label {
+  font-size: 0.8rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.spec-value {
+  font-size: 0.95rem;
+  color: #1e293b;
+  font-weight: 500;
+}
+
+/* Computer Issues */
+.computer-issues {
+  margin: 1rem 0;
+  background: #fff8f8;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  border-left: 3px solid #fecaca;
+}
+
+.issues-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #b91c1c;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.issues-list {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.issue-item {
+  font-size: 0.9rem;
+  color: #7f1d1d;
+  margin-bottom: 0.25rem;
+  position: relative;
+}
+
+.issue-item::before {
+  content: '•';
+  position: absolute;
+  left: -1rem;
+  color: #ef4444;
+}
+
+/* Computer Footer */
+.computer-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+.last-checked {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.details-button {
+  background: #4a6cf7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.details-button:hover {
+  background: #3b5bd7;
+  transform: translateY(-1px);
+}
+
+/* Loading and No Results */
+.loading-container,
+.no-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.loading-container .spinner {
+  width: 3rem;
+  height: 3rem;
+  border: 3px solid rgba(74, 108, 247, 0.1);
+  border-radius: 50%;
+  border-top-color: #4a6cf7;
+  animation: spin 0.8s linear infinite;
+  margin-bottom: 1.5rem;
+}
+
+.no-results-icon {
+  font-size: 2.5rem;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+}
+
+.no-results h3 {
+  color: #475569;
+  margin: 0.5rem 0 0.25rem;
+}
+
+.no-results p {
+  color: #94a3b8;
+  margin: 0;
+}
+
+/* Animations */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .computer-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .computer-specs {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .computer-footer {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .details-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Status-specific card styling */
+.computer-card[data-status="working"] {
+  border-left: 4px solid #22c55e;
+}
+
+.computer-card[data-status="not_working"] {
+  border-left: 4px solid #ef4444;
+}
+
+.computer-card[data-status="maintenance"] {
+  border-left: 4px solid #f59e0b;
+}
+
+.count {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+/* Status styles */
+.status {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.status.working {
+  background: #e8f8f0;
+  color: #27ae60;
+}
+
+.status.not-working {
+  background: #fde8e8;
+  color: #e74c3c;
+}
+
+.issue {
+  margin: 0.75rem 0 0;
+  padding: 0.5rem;
+  background: #f8f9fa;
+  border-left: 3px solid #e74c3c;
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+/* Loading and Empty States */
+.loading-container,
+.no-computers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  text-align: center;
+  color: #7f8c8d;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error-message {
+  background: #fde8e8;
+  color: #e74c3c;
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .computer-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+  
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .back-link {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .computer-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat-card {
+    width: 100%;
+  }
+}
+
+.computer-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.computer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.computer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.computer-header h4 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1.1rem;
+}
+
+.computer-details {
+  padding: 15px;
+}
+
+.computer-details p {
+  margin: 8px 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Status Badges */
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.status-working {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-not-working {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.status-maintenance {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-unknown {
+  background-color: #e2e3e5;
+  color: #383d41;
+}
+
+/* Issues Section */
+.issues-section {
+  margin-top: 12px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  border-left: 3px solid #dc3545;
+}
+
+.issues-section p {
+  font-weight: 500;
+  margin-bottom: 5px !important;
+}
+
+.issues-section ul {
+  margin: 5px 0 0 0;
+  padding-left: 20px;
+}
+
+.issues-section li {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-bottom: 3px;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px dashed #dee2e6;
+}
+
+.status-btn {
+  flex: 1;
+  min-width: 100px;
+  padding: 6px 8px;
+  font-size: 0.8rem;
+  border: 1px solid #dee2e6;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.status-btn:hover {
+  background: #f1f3f5;
+}
+
+.status-btn.active {
+  background: #3498db;
+  color: white;
+  border-color: #3498db;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .computer-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+  
+  .status-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .computer-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .filters {
+    justify-content: center;
+  }
+}

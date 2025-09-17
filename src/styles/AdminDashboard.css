@@ -1,0 +1,244 @@
+/* Admin Dashboard Specific Styles */
+.admin-dashboard {
+  background-color: #f8f9fb;
+}
+
+.admin-dashboard .dashboard-header {
+  background-color: #2c3e50;
+  padding: 1.2rem 2.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.admin-dashboard .dashboard-header h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.admin-dashboard .user-info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.admin-dashboard .user-info span {
+  color: #ecf0f1;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.admin-dashboard .logout-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.admin-dashboard .logout-button:hover {
+  background-color: #c0392b;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.2);
+}
+
+/* Admin Overview Section */
+.admin-overview {
+  margin-bottom: 2.5rem;
+}
+
+.update-section {
+  background: white;
+  border-radius: 12px;
+  padding: 1.8rem;
+  margin-top: 2rem;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e1e5eb;
+}
+
+.update-section h3 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.update-section h3::before {
+  content: '⚙️';
+  font-size: 1.2em;
+}
+
+.update-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 0;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+  color: #4a5568;
+  font-size: 0.95rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #d2d6dc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background-color: #f9fafb;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #4a6fa5;
+  box-shadow: 0 0 0 3px rgba(74, 111, 165, 0.2);
+  background-color: white;
+}
+
+.update-btn {
+  grid-column: 1 / -1;
+  background-color: #4a6fa5;
+  color: white;
+  border: none;
+  padding: 0.9rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-top: 0.5rem;
+}
+
+.update-btn:hover:not(:disabled) {
+  background-color: #3a5a80;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(74, 111, 165, 0.3);
+}
+
+.update-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Spinner for loading state */
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Success Message */
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 0.8rem 1.2rem;
+  border-radius: 6px;
+  margin-top: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.95rem;
+  animation: slideDown 0.3s ease-out;
+  border-left: 4px solid #28a745;
+}
+
+.success-icon {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+/* Computer List Section */
+.computer-list-section {
+  background: white;
+  border-radius: 12px;
+  padding: 1.8rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e1e5eb;
+}
+
+.computer-list-section h2 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid #eaeef2;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .update-form {
+    grid-template-columns: 1fr;
+  }
+  
+  .update-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-dashboard .dashboard-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    padding: 1.2rem 1.5rem;
+  }
+  
+  .admin-dashboard .user-info {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .update-section {
+    padding: 1.5rem 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-dashboard .user-info {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .admin-dashboard .logout-button {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .computer-list-section {
+    padding: 1.2rem 1rem;
+  }
+}

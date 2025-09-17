@@ -1,0 +1,70 @@
+.breadcrumb {
+  padding: 1rem 2rem;
+  background-color: #f5f7fa;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #586069;
+}
+
+.breadcrumb a {
+  color: #0366d6;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+  color: #1a73e8;
+  text-decoration: underline;
+}
+
+.breadcrumb .separator {
+  margin: 0 0.5rem;
+  color: #959da5;
+}
+
+.breadcrumb .current {
+  color: #24292e;
+  font-weight: 600;
+}
+
+/* Animation for breadcrumb items */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.breadcrumb li {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.breadcrumb li:nth-child(1) { animation-delay: 0.1s; }
+.breadcrumb li:nth-child(2) { animation-delay: 0.2s; }
+.breadcrumb li:nth-child(3) { animation-delay: 0.3s; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .breadcrumb {
+    padding: 0.75rem 1rem;
+  }
+  
+  .breadcrumb li {
+    font-size: 0.8rem;
+  }
+  
+  .separator {
+    margin: 0 0.25rem !important;
+  }
+}

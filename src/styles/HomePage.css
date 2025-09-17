@@ -1,0 +1,398 @@
+/* Home Page Container */
+.home-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Page Header */
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.page-header h1 {
+  color: var(--gray-900);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.page-subtitle {
+  color: var(--gray-600);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* Search Container */
+.search-container {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+.search-input {
+  position: relative;
+  width: 100%;
+}
+
+.search-input input {
+  width: 100%;
+  padding: 0.8rem 1rem 0.8rem 2.8rem;
+  font-size: 1rem;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  box-shadow: var(--box-shadow-sm);
+}
+
+.search-input input:focus {
+  outline: none;
+  border-color: var(--primary-400);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gray-400);
+  font-size: 1rem;
+}
+
+/* Labs Grid */
+.labs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Lab Card */
+.lab-card {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--box-shadow);
+  padding: 1.5rem;
+  transition: var(--transition);
+  text-align: left;
+  border-top: 4px solid transparent;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.lab-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--box-shadow-md);
+}
+
+/* Status Variants */
+.lab-card.success {
+  border-top-color: var(--success-500);
+}
+
+.lab-card.warning {
+  border-top-color: var(--warning-500);
+}
+
+.lab-card.error {
+  border-top-color: var(--error-500);
+}
+
+/* Card Header */
+.lab-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.lab-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.lab-icon {
+  color: var(--primary-500);
+  font-size: 1.25rem;
+}
+
+.lab-card h2 {
+  font-size: 1.25rem;
+  margin: 0;
+  color: var(--gray-900);
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status-badge.success {
+  background-color: var(--success-100);
+  color: var(--success-700);
+}
+
+.status-badge.warning {
+  background-color: var(--warning-100);
+  color: var(--warning-700);
+}
+
+.status-badge.error {
+  background-color: var(--error-100);
+  color: var(--error-700);
+}
+
+/* Lab Location */
+.lab-location {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 1.25rem;
+  color: var(--gray-600);
+  font-size: 0.9rem;
+}
+
+.lab-incharge {
+  font-size: 0.85rem;
+  color: var(--gray-500);
+}
+
+/* Progress Bar */
+.progress-container {
+  height: 8px;
+  background-color: var(--gray-200);
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.6s ease;
+}
+
+.progress-bar.success {
+  background-color: var(--success-500);
+}
+
+.progress-bar.warning {
+  background-color: var(--warning-500);
+}
+
+.progress-bar.error {
+  background-color: var(--error-500);
+}
+
+/* Lab Stats */
+.lab-stats {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+  gap: 0.75rem;
+}
+
+.stat {
+  text-align: center;
+  flex: 1;
+  padding: 0.75rem 0.5rem;
+  border-radius: 8px;
+  background-color: var(--gray-50);
+  transition: all 0.2s ease;
+}
+
+.stat:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat.working {
+  border-top: 3px solid var(--success-500);
+}
+
+.stat.maintenance {
+  border-top: 3px solid var(--warning-500);
+}
+
+.stat.not-working {
+  border-top: 3px solid var(--error-500);
+}
+
+.stat-number {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: var(--gray-900);
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--gray-600);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: block;
+}
+
+/* Lab Footer */
+.lab-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--gray-200);
+  font-size: 0.85rem;
+}
+
+.last-updated {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--gray-500);
+}
+
+.last-updated .icon {
+  font-size: 0.9em;
+  color: var(--gray-400);
+}
+
+.view-details {
+  color: var(--primary-600);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.lab-card:hover .view-details {
+  transform: translateX(4px);
+}
+
+/* No Results */
+.no-results {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin: 2rem 0;
+}
+
+.no-results-icon {
+  font-size: 3rem;
+  color: var(--gray-300);
+  margin-bottom: 1rem;
+}
+
+.no-results h3 {
+  color: var(--gray-700);
+  margin-bottom: 0.5rem;
+}
+
+.no-results p {
+  color: var(--gray-500);
+  margin: 0;
+}
+
+/* Loading State */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+}
+
+.loading-container .spinner {
+  width: 3rem;
+  height: 3rem;
+  border: 3px solid rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  border-top-color: var(--primary-500);
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .labs-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .lab-stats {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .stat {
+    width: 100%;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Status Card Variants */
+.status-card.working::before {
+  background: linear-gradient(90deg, var(--success-500), var(--success-700));
+}
+
+.status-card.warning::before {
+  background: linear-gradient(90deg, var(--warning-500), var(--warning-700));
+}
+
+.status-card.error::before {
+  background: linear-gradient(90deg, var(--error-500), var(--error-700));
+}
+
+/* Status Dot */
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.status-dot.excellent {
+  background-color: var(--success-500);
+  box-shadow: 0 0 6px rgba(46, 204, 113, 0.5);
+}
+
+.status-dot.good {
+  background-color: var(--warning-500);
+  box-shadow: 0 0 6px rgba(243, 156, 18, 0.5);
+}
+
+.status-dot.warning {
+  background-color: var(--error-500);
+  box-shadow: 0 0 6px rgba(231, 76, 60, 0.5);
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Ensure the home container has the fade-in animation */
+.home-container {
+  animation: fadeIn 0.6s ease-out;
+}
